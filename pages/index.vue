@@ -6,8 +6,7 @@
       </h1>
 
       <div class="inputedText">
-        <input type="text" v-model:value="prevText">
-        <button v-on:click="changeHiphop()">変換だYo!</button>
+        <input type="text" v-model:value="prevText" v-on:keyup="changeHiphop">
       </div>
 
       <div class="result">
@@ -53,7 +52,8 @@ export default {
         'チェケラッ': '確認',
         'crew': '仲間',
         'hood': '地元',
-        'リリック': '歌詞'
+        'リリック': '歌詞',
+        'インダハウス': 'ここにいる'
       };
 
       this.inputText = this.prevText;
@@ -126,6 +126,7 @@ button {
   margin-top: 24px;
   font-size: 18px;
   font-weight: bold;
+  color: #dc143c;
 }
 
 .bg {
